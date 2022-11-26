@@ -1,14 +1,18 @@
 pipeline {
     agent any
-    stages {
-        stage('Build') {
+ stages {
+    stage('Clone Git + build') {
+                steps {
+                    // Get some code from a GitHub repository
+                    git 'https://github.com/qaacademy/qaacademy_cucumber_turma6_silas.git'
+
+                    bat "mvn -Dmaven.test.failure.ignore=true clean install"
+
+                }
+         }
+        stage('Testando') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/qaacademy/qaacademy_cucumber_turma6_silas.git'
-
                 bat "mvn clean install -Dtest=Runner test"
-
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
             post {
