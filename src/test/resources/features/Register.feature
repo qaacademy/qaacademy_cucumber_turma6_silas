@@ -1,11 +1,11 @@
 #language:pt
-  @register
+  @Register
   Funcionalidade: Como usuario do site Register
     Eu desejo realizar um cadastro
   Para validar se foi cadastrado com sucesso
 
   @test001
-  Cenario: Validar cadastro com sucesso no seite Register
+  Cenario: Validar cadastro com sucesso no site Register
     Dado que eu acesso o site Register
     Quando preencho nome "Silas" e sobrenome "Leão"
     E preencho o campo Endereco com valor "Rua tal"
@@ -15,6 +15,7 @@
     E seleciono a Skills "Java"
     E seleciono um country
     E seleciono o ano "1989", o mes "May", e o dia "22"
+
 
 
 
