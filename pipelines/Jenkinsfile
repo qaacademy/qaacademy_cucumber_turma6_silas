@@ -12,7 +12,7 @@ pipeline {
          }
         stage('Testando') {
             steps {
-                bat "mvn clean install -Dtest=Runner test"
+                bat "mvn -Dtest=Runner test"
             }
 
             post {
